@@ -1,1 +1,1 @@
-# MIni-defi-java-sec-5
+# Mini-defi-java-sec-5
