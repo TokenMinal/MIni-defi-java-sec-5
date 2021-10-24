@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet"> 
+	<script src="https://kit.fontawesome.com/fae5a97603.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="progres.css">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Lecteur Video</h1>
+
+	<video src="./videos/gone.mp4" id="video" class="ecran" poster="./img/poster.png"></video>
+
+	<div class="controles">
+		<button class="btn" id="play">
+			<i class="fas fa-play" fa-2x></i> 
+		</button>
+		<button class="btn" id="stop">
+			<i class="fas fa-stop" fa-2x></i> 
+		</button>
+		<input type="range" id="progres" min="0" max="100" step="0.1" value="0" class="funny">
+		<span class="etampe-temps" id="etampe-temps">00:00</span>
+	</div>
+	<script src="script.js"></script>
+</html>
