@@ -67,7 +67,7 @@ img {
 	bottom: 230%;
 	left: 50%;
 	box-shadow: inset 5px 5px 5px rgba(73, 47, 47, 0.5);
-
+ 
 	transform: translate(-50%, 50%);
 }
 
@@ -81,4 +81,11 @@ img {
 	height: 110px;
 	bottom: 0;
 	left: 0;
+}
+
+.navigation {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	z-index: 1;
 }
