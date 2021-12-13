@@ -6,11 +6,12 @@ const btnSuivant = document.getElementById('suivant');
 
 const audio = document.getElementById('audio');
 const progres = document.getElementById('progres');
+const progresContenant = document.getElementById('progres-contenant');
 
 const titre = document.getElementById('titre');
 const cover = document.getElementById('cover');
 
-const chansonsArr = ['spin', 'poke-eye', 'bat'];
+const chansonsArr = ['spin', 'poke-eye', 'bat', 'cocaine', 'alchool addiction', 'slide to the left', 'mankey', 'i am the storm that is approching'];
 
 let orderChanson = 0;
 
@@ -61,6 +62,16 @@ function updateProgres(e) {
 	progres.style.width = `${pourcentageProgres}%`;
 }
 
+function fixerProgres(e) {
+	const width = this.clientWidth;
+
+	const cliqueX = e.offsetX;
+
+	const duree = audio.duration;
+
+	audio.currentTime = (cliqueX / width) * duree;
+}
+
 function pauseChanson() {
 	musiqueContenant.classList.remove('play');
 	audio.pause();
@@ -83,3 +94,7 @@ btnPredecedent.addEventListener('click', chansonPrecedente);
 btnSuivant.addEventListener('click', chansonSuivante);
 
 audio.addEventListener('timeupdate', updateProgres);
+
+progresContenant.addEventListener('click', fixerProgres);
+
+audio.addEventListener('ended', chansonSuivante);
